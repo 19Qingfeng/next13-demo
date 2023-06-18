@@ -1,5 +1,3 @@
-import EditableComments from './EditableComments';
-
 function getComments(): Promise<string[]> {
   return new Promise((resolve) =>
     setTimeout(() => {
@@ -15,7 +13,6 @@ export default async function Comments() {
     <div>
       <p>评论</p>
       {/* RFC 中包裹客户端组件 */}
-      <EditableComments comments={comments} />
       {comments.map((comment) => {
         return <p key={comment}>{comment}</p>;
       })}

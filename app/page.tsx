@@ -8,8 +8,7 @@ export default async function Home() {
         <div>商品</div>
         <p>价格</p>
         <div>
-          <p>评论</p>
-          <input />
+          {/* Suspense 包裹携带数据请求的 Comment Server 组件 */}
           <Suspense fallback={<div>Loading...</div>}>
             <Comment />
           </Suspense>
